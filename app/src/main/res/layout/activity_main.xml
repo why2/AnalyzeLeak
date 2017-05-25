@@ -7,7 +7,9 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:text="Hello World!"
+        android:text="goDataBinding"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:onClick="goDataBinding"/>
 </RelativeLayout>

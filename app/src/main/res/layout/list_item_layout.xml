@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!-- 导包-->
+        <import type="com.bsd.analyze.binding.DataBindingAdapter"/>
+        <import type="com.bsd.analyze.binding.User"/>
+
+        <!-- 这里是指定设置适配器的
+               指向bean
+               name:adapter 对应外部使用的setAdapter()
+               type:.DataBindingAdapter对应setAdapter()的参数-->
+        <variable
+            name="adapter"
+            type="DataBindingAdapter"/>
+
+        <!-- 这里是给item绑定数据的-->
+        <variable
+            name="user"
+            type="User"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@{user.firstName}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.lastName}"/>
+    </LinearLayout>
+</layout>
